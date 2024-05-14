@@ -11,7 +11,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GreenPark</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+        <svg  id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           
@@ -21,11 +21,26 @@
             <li><a class="hover:underline hover:text-black"href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- side navigation -->
+    
+<section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+    <div class="text-right p-5">
+        <p id="closenav"class="inline cursor-pointer">x</p>
+    </div>
+    
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li><a class="hover:underline hover:text-black"href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black"href="product.html">Product</a></li>
+            <li><a class="hover:underline hover:text-black"href="contact.html">Contact</a></li>
+        </ul>
+    </section>
+
     <!-- our product section -->
     <section class="text-center p-4">
         <h1 class="font-bold text-3xl mt-5">Our products</h1>
-        <input type="text" class="border border-black p-3 m-3" placeholder="search for your product" style="width: 80%;">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+        <input id="search" type="text" class="border border-black p-3 m-3" placeholder="search for your product" style="width: 80%;">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
             
             <div >
                 <img src="./images/plant1.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 mb-4">
@@ -34,22 +49,22 @@
             </div>
             <div>
                 <img src="./images/plant2.jpg"class="inline hover:shadow-xl transform hover:translate-y-2 mb-4">
-                <h1>Rose plant</h1>
+                <h1>Lilly plant</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/plant3.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 mb-4">
-                <h1>Rose plant</h1>
+                <h1>Daisy plant</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/plant4.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 mb-4">
-                <h1>Rose plant</h1>
+                <h1>Hibiscus plant</h1>
                 <p>$20</p>
             </div>
             <div >
                 <img src="./images/bestseller_2.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 mb-4">
-                <h1>Rose plant</h1>
+                <h1>ALoe vera plant</h1>
                 <p>$20</p>
             </div>
             <div>
@@ -75,6 +90,8 @@
         <p>This article is based on my personal research and experience</p>
         <p>@ 2021 Greenpark.com</p>
     </section>
+
+    <script src="product.js"></script>
 
 </body>
 </html>
